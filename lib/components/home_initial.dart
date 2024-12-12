@@ -30,12 +30,12 @@ class _HomeInitialContainerState extends State<HomeInitialContainer> with Ticker
     );
 
     // Trigger the fade-in after a delay to sync with the typewriter animation
-    Future.delayed(const Duration(milliseconds: 15000), () {
+    Future.delayed(const Duration(milliseconds: 7000), () {
       _arrowFadeController.forward();
     });
 
     // Show the "Scroll..." text after a delay
-    Future.delayed(const Duration(milliseconds: 16000), () {
+    Future.delayed(const Duration(milliseconds: 8000), () {
       setState(() {
         _showScrollText = true;  // Update state to show the "Scroll..." text
       });
@@ -66,7 +66,7 @@ class _HomeInitialContainerState extends State<HomeInitialContainer> with Ticker
               color: Colors.white,
               fontSize: 32,
             ),
-            duration: const Duration(milliseconds: 200),
+            duration: const Duration(milliseconds: 100),
           ),
           const SizedBox(height: 130),
           FadeTransition(
@@ -87,7 +87,7 @@ class _HomeInitialContainerState extends State<HomeInitialContainer> with Ticker
                 style: GoogleFonts.specialElite(
                   color: Colors.white,
                 ),
-                duration: const Duration(milliseconds: 200),
+                duration: const Duration(milliseconds: 100),
               ) : Container(margin: const EdgeInsets.all(7) ,child: const Text("            "))
           )
         ],
