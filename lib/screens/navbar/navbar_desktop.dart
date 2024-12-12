@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:prnvfolio_flutter/components/navbar_components/navbaritem.dart';
 
-class NavBar extends StatefulWidget {
-  const NavBar({super.key});
+class NavbarDesktop extends StatefulWidget {
+  const NavbarDesktop({super.key});
 
   @override
-  State<NavBar> createState() => _NavBarState();
+  State<NavbarDesktop> createState() => _NavBarState();
 }
 
-class _NavBarState extends State<NavBar> {
+class _NavBarState extends State<NavbarDesktop> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,35 +30,19 @@ class _NavBarState extends State<NavBar> {
           ),
           const Row(
             children: [
-              _NavBarItem(title: "GitHub"),
+              NavBarItem(title: "GitHub"),
               SizedBox(width: 16),
-              _NavBarItem(title: "Resume"),
+              NavBarItem(title: "Resume"),
               SizedBox(width: 16),
-              _NavBarItem(title: "Projects"),
+              NavBarItem(title: "Projects"),
               SizedBox(width: 16),
-              _NavBarItem(title: "About"),
+              NavBarItem(title: "About"),
               SizedBox(width: 16),
-              _NavBarItem(title: "Connect"),
+              NavBarItem(title: "Connect"),
               SizedBox(width: 16),
             ],
           )
         ],
-      ),
-    );
-  }
-}
-
-class _NavBarItem extends StatelessWidget {
-  final String title;
-  const _NavBarItem({required this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: GoogleFonts.outfit(
-        color: Colors.black,
-        fontSize: 20
       ),
     );
   }

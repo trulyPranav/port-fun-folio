@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:visibility_detector/visibility_detector.dart';
+import 'package:typewritertext/typewritertext.dart';
+//import 'package:visibility_detector/visibility_detector.dart';
 
 class HomeScrollable extends StatefulWidget {
   const HomeScrollable({super.key});
@@ -19,28 +20,28 @@ class _HomeScrollableState extends State<HomeScrollable> {
       margin: const EdgeInsets.all(50.00),
       color: Colors.black,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(10.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                DefaultTextStyle(
+                TypeWriter.text(
+                  "Hey I'm Pranav!    ",
+                  maintainSize: true,
+                  textAlign: TextAlign.center,
                   style: GoogleFonts.racingSansOne(
                     color: Colors.white,
-                    fontSize: 32
+                    fontSize: 36,
                   ),
-                  child: AnimatedTextKit(
-                    animatedTexts: [
-                      TypewriterAnimatedText("Hey! I'm Pranav!")
-                    ],
-                    isRepeatingAnimation: false,
-                  )
+                  duration: const Duration(milliseconds: 300),
                 ),
-
+                const SizedBox(height: 20),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    const SizedBox(width: 10),
                     DefaultTextStyle(
                       style: GoogleFonts.racingSansOne(
                         color: Colors.white,
@@ -57,15 +58,16 @@ class _HomeScrollableState extends State<HomeScrollable> {
                       ),
                       child: AnimatedTextKit(
                         animatedTexts: [
-                          TypewriterAnimatedText("Flutter"),
-                          TypewriterAnimatedText("Python"),
-                          TypewriterAnimatedText("DevOps"),                                                    
+                          TypewriterAnimatedText("Flutter", speed: const Duration(milliseconds: 300)),
+                          TypewriterAnimatedText("Python", speed: const Duration(milliseconds: 300)),
+                          TypewriterAnimatedText("DevOps", speed: const Duration(milliseconds: 300)),                                                    
                         ],
                         isRepeatingAnimation: true,
                         repeatForever: true,
                         pause: Durations.medium1,
                       )
                     ),
+                    Text("Developer", style: GoogleFonts.racingSansOne(color: Colors.white,fontSize: 32),)
                   ],
                 )
               ],
