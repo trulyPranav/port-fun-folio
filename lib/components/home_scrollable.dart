@@ -27,7 +27,7 @@ class _HomeScrollableState extends State<HomeScrollable> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height - 178,
+      height: MediaQuery.of(context).size.height,
       margin: const EdgeInsets.all(50.00),
       color: Colors.black,
       child: Padding(
@@ -99,8 +99,8 @@ class _HomeScrollableState extends State<HomeScrollable> {
                       },
                       child: RotatorFlip(
                         firstChild: Container(
-                          width: 150,
-                          height: 150,
+                          width: 120,
+                          height: 120,
                           decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.white,
@@ -112,8 +112,8 @@ class _HomeScrollableState extends State<HomeScrollable> {
                           ),
                         ),
                         secondChild: Container(
-                          height: 150,
-                          width: 150,
+                          height: 120,
+                          width: 120,
                           decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.white,
